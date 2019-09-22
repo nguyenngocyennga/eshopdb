@@ -62,7 +62,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install -y postgresql ruby python3 build-essential
+    apt-get install -y postgresql ruby python3 build-essential unixodbc unixodbc-dev
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     source ~/.bashrc
     nvm install 10
