@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nintendo-switch-eshop": "^2.2.2"
+    "nintendo-switch-eshop": "^2.2.2",
+    "pg": "^7.12.1"
   }
 }
