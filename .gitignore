@@ -1,3 +1,4 @@
 .vagrant
+nohup.out
 scrapper/node_modules
 view/vendor/bundle
