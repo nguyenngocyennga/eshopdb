@@ -10,8 +10,3 @@ eshop.getGamesEurope().then(function(result) {
         console.log("The file was saved!");
     });
 });
-
-// Next task:
-// DONE 1. Create the view layer with RoR. The view layer will display the europe.json file directly to the web browser.
-// 2. Convert europe.json into a SQLite database
-// 3. Add Ruby models to fit the EuropeGame objects
