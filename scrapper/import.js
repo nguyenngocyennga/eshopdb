@@ -9,7 +9,7 @@
 
 const { Client } = require('pg')
 // const europe = require('./europe-short.json');
-const europe = require('../view/public/europe.json');
+const europe = require('./europe.json');
 
 const client = new Client({
   user: 'vagrant',
