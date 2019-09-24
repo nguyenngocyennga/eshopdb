@@ -1,5 +1,6 @@
 ## Getting started
 
+- Download VirtualBox at https://www.virtualbox.org/wiki/Downloads
 - Download Vagrant at https://www.vagrantup.com/
 - cd to the project directory
 - `vagrant up && vagrant ssh`
