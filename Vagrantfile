@@ -57,7 +57,11 @@ Vagrant.configure("2") do |config|
   source ~/.bashrc
   nvm install 10
   nvm use 10
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 061070b4275bd55bf1bf3af84a38def821c99494
   sudo -s -u postgres
   #echo heytheredelilah | createuser --superuser vagrant --password
   #createdb vagrant
