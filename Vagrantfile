@@ -14,15 +14,15 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/bionic64"
 
-  # Port forwarding for SQLPad
-  config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "127.0.0.1"
-  # PostgreSQL
-  config.vm.network "forwarded_port", guest: 5432, host: 5432, host_ip: "127.0.0.1"
-  config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
+  # # Port forwarding for SQLPad
+  # config.vm.network "forwarded_port", guest: 3010, host: 3010, host_ip: "127.0.0.1"
+  # # PostgreSQL
+  # config.vm.network "forwarded_port", guest: 5432, host: 5432, host_ip: "127.0.0.1"
+  # config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
