@@ -7,7 +7,8 @@ const port = 3000
 // 1. connect to the db (same as the import.js script)
 const pg = require('pg')
 const dbClient = new pg.Client({
-    user: 'vagrant',
+    // TODO Make this configurable
+    user: 'ubuntu',
     password: 'heytheredelilah'
   })
 dbClient.connect()
