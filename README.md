@@ -14,4 +14,4 @@
 - game reviews
 - pagination
 - search
--
+- beautify
