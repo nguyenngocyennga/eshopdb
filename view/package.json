@@ -14,6 +14,6 @@
     "pg": "^7.12.1"
   },
   "devDependencies": {
-    "express-reload": "^1.2.0"
+    "nodemon": "^1.19.3"
   }
 }
