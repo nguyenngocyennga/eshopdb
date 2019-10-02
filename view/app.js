@@ -32,10 +32,10 @@ app.get('/', (req, res) => {
     // and choose the correct one according to the query string
 
     // the default query
-    let sqlQuery = 'SELECT title, price_sorting_f, pretty_date_s FROM games_eu'
+    let sqlQuery = 'SELECT title, price_sorting_f, pretty_date_s, image_url FROM games_eu'
 
     if (req.query.sortby === "price") {
-      sqlQuery = 'SELECT title, price_sorting_f, pretty_date_s FROM games_eu ORDER BY "price_sorting_f"'
+      sqlQuery += ' ORDER BY "price_sorting_f"'
     }
 
     // 2. query the games_eu table
@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
       for (row of result.rows) {
         tableContent += `
           <tr>
+            <td><img src="${row.image_url}"></td>
             <td>${row.title}</td>
             <td>${row.price_sorting_f}</td>
             <td>${row.pretty_date_s}</td>
