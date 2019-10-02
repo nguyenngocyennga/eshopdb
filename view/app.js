@@ -38,6 +38,14 @@ app.get('/', (req, res) => {
       sqlQuery += ' ORDER BY "price_sorting_f"'
     }
 
+    // This is BAD code and very insecure
+    // TODO sanitize the input (adding validation)
+    // SQL injection
+
+    const currentOffset = parseInt(req.query.offset, 10) || 0
+    const currentLimit = parseInt(req.query.limit, 10) || 10
+    sqlQuery += ` LIMIT ${currentLimit} OFFSET ${currentOffset}`
+
     // 2. query the games_eu table
     dbClient.query(sqlQuery)
     .then(function(result) {
@@ -68,6 +76,9 @@ app.get('/', (req, res) => {
       <style>
         tr:nth-child(even) {background-color: #f2f2f2;}
       </style>
+
+      <a href="?offset=${currentOffset <= 0 ? 0 : currentOffset - 10}">Prev</a>
+      <a href="?offset=${currentOffset + 10}">Next</a>
 
       <table>
         <caption>All the games!!!!</caption>

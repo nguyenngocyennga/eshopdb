@@ -12,6 +12,6 @@
 - price comparison between regions
 - images (and colors!!!!) !!!!!
 - game reviews
-- pagination
+- [x] pagination
 - search
 - beautify
