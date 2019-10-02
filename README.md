@@ -6,7 +6,7 @@
 - `vagrant up && vagrant ssh`
 - When you're inside the Vagrant environment, `cd /vagrant` to get to the code folder
 
-## Road Map
+## Roadmap
 
 - price history/watching/notification
 - price comparison between regions
